@@ -1,0 +1,13 @@
+header {
+btn-active, btn-inactive, btn-inactive
+}
+row {
+single {
+small-title, text, btn-red
+}
+}
+row {
+single {
+small-title, text, btn-orange
+}
+}
