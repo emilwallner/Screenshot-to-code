@@ -1,0 +1,17 @@
+header {
+btn-active, btn-inactive, btn-inactive
+}
+row {
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-orange
+}
+quadruple {
+small-title, text, btn-red
+}
+}

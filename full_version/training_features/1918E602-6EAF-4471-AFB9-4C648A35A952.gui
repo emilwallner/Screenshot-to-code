@@ -1,0 +1,30 @@
+header {
+btn-inactive, btn-inactive, btn-inactive, btn-inactive, btn-active
+}
+row {
+double {
+small-title, text, btn-red
+}
+double {
+small-title, text, btn-green
+}
+}
+row {
+quadruple {
+small-title, text, btn-red
+}
+quadruple {
+small-title, text, btn-orange
+}
+quadruple {
+small-title, text, btn-green
+}
+quadruple {
+small-title, text, btn-red
+}
+}
+row {
+single {
+small-title, text, btn-green
+}
+}
