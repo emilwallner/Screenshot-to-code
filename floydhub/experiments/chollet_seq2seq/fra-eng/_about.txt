@@ -1,0 +1,60 @@
+** Info **
+
+Check for newest version here:
+  http://www.manythings.org/anki/
+Date of this file:
+  2017-10-30
+
+This data is from the sentences_detailed.csv file from tatoeba.org.
+http://tatoeba.org/files/downloads/sentences_detailed.csv
+
+
+
+** Terms of Use **
+
+See the terms of use.
+These files have been released under the same license as the
+source.
+
+http://tatoeba.org/eng/terms_of_use
+http://creativecommons.org/licenses/by/2.0
+
+Attribution: www.manythings.org/anki and tatoeba.org
+
+
+
+** Warnings ** 
+
+The data from the Tatoeba Project contains errors.
+
+To lower the number of errors you are likely to see, only
+sentences by native speakers and proofread sentences have
+been included.
+
+For the non-English language, I made these (possibly wrong)
+assumptions.
+Assumption 1: Sentences written by native speakers can be
+trusted.
+Assumption 2: Contributors to the Tatoeba Project are honest
+about what their native language is.
+
+For English, I used the sentences that I have proofread
+and thought were OK.
+Of course, I may have missed a few errors.
+
+
+
+** Downloading Anki ** 
+
+See http://ankisrs.net/
+
+
+
+** Importing into Anki ** 
+
+Information is at http://ankisrs.net/docs/manual.html#importing
+
+Of particular interest may be about "duplicates" at http://ankisrs.net/docs/manual.html#duplicates-and-updating.
+You can choose:
+1. not to allow duplicates (alternate translations) as cards.
+2. allow duplicates (alternate translations) as cards.

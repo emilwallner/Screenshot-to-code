@@ -1,0 +1,182 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import keras\n",
+    "from keras.applications.inception_resnet_v2 import InceptionResNetV2\n",
+    "from keras.preprocessing import image\n",
+    "from keras.engine import Layer\n",
+    "from keras.applications.inception_resnet_v2 import preprocess_input\n",
+    "from keras.layers import Conv2D, UpSampling2D, InputLayer, Conv2DTranspose, Input, Reshape, merge, concatenate\n",
+    "from keras.layers import Activation, Dense, Dropout, Flatten\n",
+    "from keras.layers.normalization import BatchNormalization\n",
+    "from keras.callbacks import TensorBoard \n",
+    "from keras.models import Sequential, Model\n",
+    "from keras.layers.core import RepeatVector, Permute\n",
+    "from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img\n",
+    "from skimage.color import rgb2lab, lab2rgb, rgb2gray, gray2rgb\n",
+    "from skimage.transform import resize\n",
+    "from skimage.io import imsave\n",
+    "import numpy as np\n",
+    "import os\n",
+    "import random\n",
+    "import tensorflow as tf"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# Get images\n",
+    "X = []\n",
+    "for filename in os.listdir('Train/'):\n",
+    "    X.append(img_to_array(load_img('Train/'+filename)))\n",
+    "X = np.array(X, dtype=float)\n",
+    "Xtrain = 1.0/255*X\n",
+    "\n",
+    "\n",
+    "#Load weights\n",
+    "inception = InceptionResNetV2(weights='imagenet', include_top=True)\n",
+    "inception.graph = tf.get_default_graph()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "embed_input = Input(shape=(1000,))\n",
+    "\n",
+    "#Encoder\n",
+    "encoder_input = Input(shape=(256, 256, 1,))\n",
+    "encoder_output = Conv2D(64, (3,3), activation='relu', padding='same', strides=2)(encoder_input)\n",
+    "encoder_output = Conv2D(128, (3,3), activation='relu', padding='same')(encoder_output)\n",
+    "encoder_output = Conv2D(128, (3,3), activation='relu', padding='same', strides=2)(encoder_output)\n",
+    "encoder_output = Conv2D(256, (3,3), activation='relu', padding='same')(encoder_output)\n",
+    "encoder_output = Conv2D(256, (3,3), activation='relu', padding='same', strides=2)(encoder_output)\n",
+    "encoder_output = Conv2D(512, (3,3), activation='relu', padding='same')(encoder_output)\n",
+    "encoder_output = Conv2D(512, (3,3), activation='relu', padding='same')(encoder_output)\n",
+    "encoder_output = Conv2D(256, (3,3), activation='relu', padding='same')(encoder_output)\n",
+    "\n",
+    "#Fusion\n",
+    "fusion_output = RepeatVector(32 * 32)(embed_input) \n",
+    "fusion_output = Reshape(([32, 32, 1000]))(fusion_output)\n",
+    "fusion_output = concatenate([encoder_output, fusion_output], axis=3) \n",
+    "fusion_output = Conv2D(256, (1, 1), activation='relu', padding='same')(fusion_output) \n",
+    "\n",
+    "#Decoder\n",
+    "decoder_output = Conv2D(128, (3,3), activation='relu', padding='same')(fusion_output)\n",
+    "decoder_output = UpSampling2D((2, 2))(decoder_output)\n",
+    "decoder_output = Conv2D(64, (3,3), activation='relu', padding='same')(decoder_output)\n",
+    "decoder_output = UpSampling2D((2, 2))(decoder_output)\n",
+    "decoder_output = Conv2D(32, (3,3), activation='relu', padding='same')(decoder_output)\n",
+    "decoder_output = Conv2D(16, (3,3), activation='relu', padding='same')(decoder_output)\n",
+    "decoder_output = Conv2D(2, (3, 3), activation='tanh', padding='same')(decoder_output)\n",
+    "decoder_output = UpSampling2D((2, 2))(decoder_output)\n",
+    "\n",
+    "model = Model(inputs=[encoder_input, embed_input], outputs=decoder_output)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def create_inception_embedding(grayscaled_rgb):\n",
+    "    grayscaled_rgb_resized = []\n",
+    "    for i in grayscaled_rgb:\n",
+    "        i = resize(i, (299, 299, 3), mode='constant')\n",
+    "        grayscaled_rgb_resized.append(i)\n",
+    "    grayscaled_rgb_resized = np.array(grayscaled_rgb_resized)\n",
+    "    grayscaled_rgb_resized = preprocess_input(grayscaled_rgb_resized)\n",
+    "    with inception.graph.as_default():\n",
+    "        embed = inception.predict(grayscaled_rgb_resized)\n",
+    "    return embed\n",
+    "\n",
+    "# Image transformer\n",
+    "datagen = ImageDataGenerator(\n",
+    "        shear_range=0.2,\n",
+    "        zoom_range=0.2,\n",
+    "        rotation_range=20,\n",
+    "        horizontal_flip=True)\n",
+    "\n",
+    "#Generate training data\n",
+    "batch_size = 10\n",
+    "\n",
+    "def image_a_b_gen(batch_size):\n",
+    "    for batch in datagen.flow(Xtrain, batch_size=batch_size):\n",
+    "        grayscaled_rgb = gray2rgb(rgb2gray(batch))\n",
+    "        embed = create_inception_embedding(grayscaled_rgb)\n",
+    "        lab_batch = rgb2lab(batch)\n",
+    "        X_batch = lab_batch[:,:,:,0]\n",
+    "        X_batch = X_batch.reshape(X_batch.shape+(1,))\n",
+    "        Y_batch = lab_batch[:,:,:,1:] / 128\n",
+    "        yield ([X_batch, create_inception_embedding(grayscaled_rgb)], Y_batch)\n",
+    "\n",
+    "\n",
+    "#Train model      \n",
+    "model.compile(optimizer='rmsprop', loss='mse')\n",
+    "model.fit_generator(image_a_b_gen(batch_size), epochs=1, steps_per_epoch=1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "color_me = []\n",
+    "for filename in os.listdir('Test/'):\n",
+    "    color_me.append(img_to_array(load_img('Test/'+filename)))\n",
+    "color_me = np.array(color_me, dtype=float)\n",
+    "gray_me = gray2rgb(rgb2gray(1.0/255*color_me))\n",
+    "color_me_embed = create_inception_embedding(gray_me)\n",
+    "color_me = rgb2lab(1.0/255*color_me)[:,:,:,0]\n",
+    "color_me = color_me.reshape(color_me.shape+(1,))\n",
+    "\n",
+    "\n",
+    "# Test model\n",
+    "output = model.predict([color_me, color_me_embed])\n",
+    "output = output * 128\n",
+    "\n",
+    "# Output colorizations\n",
+    "for i in range(len(output)):\n",
+    "    cur = np.zeros((256, 256, 3))\n",
+    "    cur[:,:,0] = color_me[i][:,:,0]\n",
+    "    cur[:,:,1:] = output[i]\n",
+    "    imsave(\"result/img_\"+str(i)+\".png\", lab2rgb(cur))"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
