@@ -16,10 +16,20 @@ class Compiler:
 
         self.root = Node("body", None, self.content_holder)
 
-    def compile(self, input_file_path, output_file_path, rendering_function=None):
-        dsl_file = open(input_file_path)
+    def compile(self, tokens, output_file_path, rendering_function=None):
+        dsl_file = tokens
+        
+        #Parse fix
+        dsl_file = dsl_file[1:-1]
+        dsl_file = ' '.join(dsl_file)
+        dsl_file = dsl_file.replace('{', '{8').replace('}', '8}8')
+        dsl_file = dsl_file.replace(' ', '')
+        dsl_file = dsl_file.split('8')
+        dsl_file = filter(None, dsl_file)
+        #End Parse fix
+        
         current_parent = self.root
-
+        
         for token in dsl_file:
             token = token.replace(" ", "").replace("\n", "")
 
@@ -39,4 +49,5 @@ class Compiler:
 
         output_html = self.root.render(self.dsl_mapping, rendering_function=rendering_function)
         with open(output_file_path, 'w') as output_file:
-            output_file.write(output_html)
+           output_file.write(output_html)
+        return output_html
