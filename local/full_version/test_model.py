@@ -42,7 +42,7 @@ def load_data(data_dir):
     images = []
     all_filenames = os.listdir(data_dir)
     all_filenames.sort()
-    for filename in (all_filenames)[-4:]:
+    for filename in (all_filenames)[:2]:
         if filename[-3:] == "npz":
             image = np.load(data_dir+filename)
             images.append(image['features'])
@@ -132,23 +132,6 @@ def generate_desc(model, tokenizer, photo, max_length):
     return in_text
 
 
-# In[8]:
-
-
-def calc_score(real_values, predicted_values):
-    total = 000.1
-    error = 000.1
-    for i in range(len(real_values)):
-        for k in range(min([len(predicted_values[i]), len(real_values[i][0])])):
-            if predicted_values[i][k] != real_values[i][0][k]:
-                error += 1
-#                 print(predicted_values[i][k], real_values[i][k])
-            total += 1
-        if len(predicted_values[i]) != len(real_values[i]):
-            error += 1
-        print(error, total)
-    return 1 - (error / total)
-
 
 # In[9]:
 
@@ -192,36 +175,10 @@ actual, predicted = evaluate_model(loaded_model, texts, train_features, tokenize
 # In[103]:
 
 
-from compiler.classes.Utils import *
 from compiler.classes.Compiler import *
 
 
-# In[105]:
-
-
-#from IPython.core.debugger import Tracer
-
-FILL_WITH_RANDOM_TEXT = True
-TEXT_PLACE_HOLDER = "[]"
-
-dsl_path = "compiler/assets/web-dsl-mapping.json"
-compiler = Compiler(dsl_path)
-
-#print(test)
-
-def render_content_with_text(key, value):
-    if FILL_WITH_RANDOM_TEXT:
-        if key.find("btn") != -1:
-            value = value.replace(TEXT_PLACE_HOLDER, Utils.get_random_text())
-        elif key.find("title") != -1:
-            value = value.replace(TEXT_PLACE_HOLDER, Utils.get_random_text(length_text=5, space_number=0))
-        elif key.find("text") != -1:
-            value = value.replace(TEXT_PLACE_HOLDER,
-                                  Utils.get_random_text(length_text=56, space_number=7, with_upper_case=False))
-    return value
-
-
-bootstrap_markup = compiler.compile(actual[0], 'index.html', rendering_function=render_content_with_text)
+bootstrap_markup = compiler.compile(predicted[0], 'index.html')
 #compiler.compile(test, rendering_function=render_content_with_text)
 
 

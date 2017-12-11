@@ -3,6 +3,18 @@ __author__ = 'Tony Beltramelli - www.tonybeltramelli.com'
 
 import json
 from .Node import *
+from .Utils import *
+
+def render_content_with_text(key, value):
+    if FILL_WITH_RANDOM_TEXT:
+        if key.find("btn") != -1:
+            value = value.replace(TEXT_PLACE_HOLDER, Utils.get_random_text())
+        elif key.find("title") != -1:
+            value = value.replace(TEXT_PLACE_HOLDER, Utils.get_random_text(length_text=5, space_number=0))
+        elif key.find("text") != -1:
+            value = value.replace(TEXT_PLACE_HOLDER,
+                                  Utils.get_random_text(length_text=56, space_number=7, with_upper_case=False))
+    return value
 
 
 class Compiler:
@@ -16,7 +28,7 @@ class Compiler:
 
         self.root = Node("body", None, self.content_holder)
 
-    def compile(self, tokens, output_file_path, rendering_function=None):
+    def compile(self, tokens, output_file_path):
         dsl_file = tokens
         
         #Parse fix
@@ -25,14 +37,15 @@ class Compiler:
         dsl_file = dsl_file.replace('{', '{8').replace('}', '8}8')
         dsl_file = dsl_file.replace(' ', '')
         dsl_file = dsl_file.split('8')
-        dsl_file = filter(None, dsl_file)
+        dsl_file = list(filter(None, dsl_file))
         #End Parse fix
         
         current_parent = self.root
         
         for token in dsl_file:
             token = token.replace(" ", "").replace("\n", "")
-
+            if token == '':
+                break
             if token.find(self.opening_tag) != -1:
                 token = token.replace(self.opening_tag, "")
 
@@ -47,7 +60,14 @@ class Compiler:
                     element = Node(t, current_parent, self.content_holder)
                     current_parent.add_child(element)
 
-        output_html = self.root.render(self.dsl_mapping, rendering_function=rendering_function)
+        output_html = self.root.render(self.dsl_mapping, rendering_function=render_content_with_text)
         with open(output_file_path, 'w') as output_file:
            output_file.write(output_html)
         return output_html
+    
+    
+FILL_WITH_RANDOM_TEXT = True
+TEXT_PLACE_HOLDER = "[]"
+
+dsl_path = "compiler/assets/web-dsl-mapping.json"
+compiler = Compiler(dsl_path)
