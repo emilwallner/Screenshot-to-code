@@ -20,11 +20,17 @@ class Node:
     def render(self, mapping, rendering_function=None):
         content = ""
         for child in self.children:
-            content += child.render(mapping, rendering_function)
+            placeholder = child.render(mapping, rendering_function)
+            if placeholder is None:
+                self = None
+                return
+            else:
+                content += placeholder
             
         value = mapping.get(self.key, None)
         if value is None:
-            return("Parse Error for" + self.key) 
+            self = None
+            return None
         if rendering_function is not None:
             value = rendering_function(self.key, value)
 

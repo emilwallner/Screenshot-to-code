@@ -60,6 +60,9 @@ class Compiler:
                     current_parent.add_child(element)
 
         output_html = self.root.render(self.dsl_mapping, rendering_function=render_content_with_text)
+        if output_html is None:
+            return "Parsing Error"
+        
         with open(output_file_path, 'w') as output_file:
            output_file.write(output_html)
         return output_html
@@ -67,6 +70,3 @@ class Compiler:
     
 FILL_WITH_RANDOM_TEXT = True
 TEXT_PLACE_HOLDER = "[]"
-
-dsl_path = "compiler/assets/web-dsl-mapping.json"
-compiler = Compiler(dsl_path)
