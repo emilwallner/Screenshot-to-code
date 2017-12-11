@@ -14,7 +14,6 @@ class Node:
         self.children.append(child)
 
     def show(self):
-        print(self.key)
         for child in self.children:
             child.show()
 
@@ -22,8 +21,10 @@ class Node:
         content = ""
         for child in self.children:
             content += child.render(mapping, rendering_function)
-
-        value = mapping[self.key]
+            
+        value = mapping.get(self.key, None)
+        if value is None:
+            return("Parse Error for" + self.key) 
         if rendering_function is not None:
             value = rendering_function(self.key, value)
 

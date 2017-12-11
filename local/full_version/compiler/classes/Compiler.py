@@ -44,8 +44,7 @@ class Compiler:
         
         for token in dsl_file:
             token = token.replace(" ", "").replace("\n", "")
-            if token == '':
-                break
+           
             if token.find(self.opening_tag) != -1:
                 token = token.replace(self.opening_tag, "")
 
