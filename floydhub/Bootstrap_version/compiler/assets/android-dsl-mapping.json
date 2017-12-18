@@ -1,0 +1,18 @@
+{
+  "opening-tag": "{",
+  "closing-tag": "}",
+  "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:id=\"@+id/container\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:orientation=\"vertical\"\n    tools:context=\"com.tonybeltramelli.android_gui.MainActivity\">\n    {}\n</LinearLayout>\n",
+  "stack": "<FrameLayout android:id=\"@+id/content\" android:layout_width=\"match_parent\" android:layout_height=\"match_parent\" android:layout_weight=\"1\" android:padding=\"10dp\">\n    <LinearLayout android:layout_width=\"match_parent\" android:layout_height=\"match_parent\" android:orientation=\"vertical\">\n        {}\n    </LinearLayout>\n</FrameLayout>",
+  "row": "<LinearLayout android:layout_width=\"match_parent\" android:layout_height=\"wrap_content\" android:orientation=\"horizontal\" android:paddingTop=\"10dp\" android:paddingBottom=\"10dp\" android:weightSum=\"1\">\n{}\n</LinearLayout>",
+  "label": "<TextView android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:text=\"[TEXT]\" android:textAppearance=\"@style/TextAppearance.AppCompat.Body2\"/>\n",
+  "btn": "<Button android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:text=\"[TEXT]\"/>",
+  "slider": "<SeekBar android:id=\"@+id/[ID]\" style=\"@style/Widget.AppCompat.SeekBar.Discrete\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:layout_weight=\"0.9\" android:max=\"10\" android:progress=\"5\"/>",
+  "check": "<CheckBox android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:paddingRight=\"10dp\" android:text=\"[TEXT]\"/>",
+  "radio": "<RadioButton android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:paddingRight=\"10dp\" android:text=\"[TEXT]\"/>",
+  "switch": "<Switch android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:paddingRight=\"10dp\" android:text=\"[TEXT]\"/>",
+  "footer": "<LinearLayout android:layout_width=\"match_parent\" android:layout_height=\"wrap_content\" android:orientation=\"horizontal\" android:weightSum=\"1\">\n    {}\n</LinearLayout>",
+  "btn-home": "<Button android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:background=\"#0ffffff\" android:layout_weight=\"1\" android:drawableBottom=\"@drawable/ic_home_black_24dp\" android:text=\"\"/>",
+  "btn-dashboard": "<Button android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:background=\"#0ffffff\" android:layout_weight=\"1\" android:drawableBottom=\"@drawable/ic_dashboard_black_24dp\" android:text=\"\"/>",
+  "btn-notifications": "<Button android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:background=\"#0ffffff\" android:layout_weight=\"1\" android:drawableBottom=\"@drawable/ic_notifications_black_24dp\" android:text=\"\"/>",
+  "btn-search": "<Button android:id=\"@+id/[ID]\" android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\" android:background=\"#0ffffff\" android:layout_weight=\"1\" android:drawableBottom=\"?android:attr/actionModeWebSearchDrawable\" android:text=\"\"/>"
+}
