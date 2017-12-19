@@ -14,7 +14,7 @@
 <img src="/readme_images/bootstrap.gif?raw=true" width="800px">
 
 
-## Folder structures 
+## Folder structure
 
 ``` bash
   |-floydhub                               #Folder to run the project on Floyhub
