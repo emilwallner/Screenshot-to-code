@@ -3,12 +3,12 @@
 
 
 ## Hello World
-![Alt text](https://i.imgur.com/FVVnDeJ.gif "Optional title")
+![Hello World](https://i.imgur.com/FVVnDeJ.gif "Hello World")
 
 
 ## HTML
-![Alt text](https://i.imgur.com/KnKKHIg.gif "Optional title")
+![HTML](https://i.imgur.com/KnKKHIg.gif "HTML")
 
 
 ## Bootstrap
-![Alt text](https://i.imgur.com/L9a8v6U.gif "Optional title")
+![Bootstrap](https://i.imgur.com/L9a8v6U.gif "Bootstrap")
