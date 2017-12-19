@@ -1,18 +1,11 @@
 # Turning design mockups into code with deep learning
 
+## Getting started
 
+## Installations 
 
-## Hello World
-![Hello World](https://i.imgur.com/FVVnDeJ.gif "Hello World")
-
-
-## HTML
-<img src="/readme_images/html.gif?raw=true" width="800px">
-
-
-## Bootstrap
-<img src="/readme_images/bootstrap.gif?raw=true" width="800px">
-
+### Floydhub
+### Local
 
 ## Folder structure
 
@@ -38,3 +31,17 @@
   |  |  |-images                           #Screenshots for training
   |-readme_images                          #Images for the readme page
 ```
+
+
+## Hello World
+![Hello World](https://i.imgur.com/FVVnDeJ.gif "Hello World")
+
+
+## HTML
+<img src="/readme_images/html.gif?raw=true" width="800px">
+
+
+## Bootstrap
+<img src="/readme_images/bootstrap.gif?raw=true" width="800px">
+
+## Acknowledgments
