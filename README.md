@@ -49,10 +49,12 @@ pip install pillow
 
 ## Hello World
 ![Hello World](https://i.imgur.com/FVVnDeJ.gif "Hello World")
+<img src="/readme_images/Hello_world_model.png?raw=true" width="400px">
 
 
 ## HTML
 <img src="/readme_images/html.gif?raw=true" width="800px">
+<img src="/readme_images/HTML_model.png?raw=true" width="400px">
 
 
 ## Bootstrap
