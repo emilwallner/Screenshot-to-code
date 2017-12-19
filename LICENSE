@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2017 Emil Wallner
 
-The compile.py file and the dataset for the "full-version" is licensed 
+The files in the folder compiler and the dataset for the "full-version" is licensed 
 under Tony Beltramelli's Apache License 2.0: https://github.com/tonybeltramelli/pix2code/blob/master/LICENSE
 
 All other files are licensed under MIT.
