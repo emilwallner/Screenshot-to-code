@@ -7,8 +7,8 @@
 
 
 ## HTML
-<img src="/local/readme_images/bootstrap.gif?raw=true" width="800px">
+<img src="/local/readme_images/html.gif?raw=true" width="800px">
 
 
 ## Bootstrap
-<img src="/local/readme_images/html.gif?raw=true" width="800px">
+<img src="/local/readme_images/bootstrap.gif?raw=true" width="800px">
