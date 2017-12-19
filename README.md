@@ -24,10 +24,6 @@
   |  |-HTML                                #The HTML version
   |  |  |-resources									
   |  |  |  |-Resources_for_index_file      #CSS and images to test index.html file
-  |  |  |  |  |-images								
-  |  |  |  |  |  |-demo						
-  |  |  |  |  |-scripts
-  |  |  |  |  |-styles
   |  |  |  |-html                          #HTML files to train it on
   |  |  |  |-images                        #Screenshots for training
   |-local                                  #Local setup
@@ -38,11 +34,7 @@
   |  |-Hello_world                         #The Hello World version
   |  |-HTML                                #The HTML version
   |  |  |-Resources_for_index_file         #CSS,images and scripts to test index.html file
-  |  |  |  |-images
-  |  |  |  |  |-demo
-  |  |  |  |-scripts
-  |  |  |  |-styles
-  |  |  |-html                              #HTML files to train it on
-  |  |  |-images                            #Screenshots for training
-  |-readme_images                           #Images for the readme page
+  |  |  |-html                             #HTML files to train it on
+  |  |  |-images                           #Screenshots for training
+  |-readme_images                          #Images for the readme page
 ```
