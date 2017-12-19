@@ -2,10 +2,24 @@
 
 ## Getting started
 
-## Installations 
+## Installation
 
 ### Floydhub
+``` bash
+pip install floyd-cli
+floyd login
+git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
+cd Screenshot-to-code-in-Keras
+floyd init projectname
+floyd init projectname
+floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/s2c_val/1:data --mode jupyter
+```
 ### Local
+``` bash
+pip install keras
+pip install tensorflow
+pip install pillow
+```
 
 ## Folder structure
 
