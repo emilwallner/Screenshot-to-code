@@ -60,6 +60,6 @@ pip install h5py
 
 ## Bootstrap
 <img src="/README_images/bootstrap.gif?raw=true" width="800px">
-<img src="/README_images/bootstrap_model?raw=true" width="400px">
+<img src="/README_images/Bootstrap_model.png?raw=true" width="400px">
 
 ## Acknowledgments
