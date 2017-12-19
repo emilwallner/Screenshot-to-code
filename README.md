@@ -7,8 +7,42 @@
 
 
 ## HTML
-<img src="/local/readme_images/html.gif?raw=true" width="800px">
+<img src="/readme_images/html.gif?raw=true" width="800px">
 
 
 ## Bootstrap
-<img src="/local/readme_images/bootstrap.gif?raw=true" width="800px">
+<img src="/readme_images/bootstrap.gif?raw=true" width="800px">
+
+
+## Folder structures 
+
+``` bash
+  |-floydhub                               #Folder to run the project on Floyhub
+  |  |-Bootstrap                           #The Bootstrap version
+  |  |  |-compiler                         #A compiler to turn the tokens to HTML/CSS (by pix2code)
+  |  |-Hello_world                         #The Hello World version
+  |  |-HTML                                #The HTML version
+  |  |  |-resources									
+  |  |  |  |-Resources_for_index_file      #CSS and images to test index.html file
+  |  |  |  |  |-images								
+  |  |  |  |  |  |-demo						
+  |  |  |  |  |-scripts
+  |  |  |  |  |-styles
+  |  |  |  |-html                          #HTML files to train it on
+  |  |  |  |-images                        #Screenshots for training
+  |-local                                  #Local setup
+  |  |-Bootstrap                           #The Bootstrap version
+  |  |  |-compiler                         #A compiler to turn the tokens to HTML/CSS (by pix2code)
+  |  |  |-resources											
+  |  |  |  |-eval_light                    #10 test images and markup
+  |  |-Hello_world                         #The Hello World version
+  |  |-HTML                                #The HTML version
+  |  |  |-Resources_for_index_file         #CSS,images and scripts to test index.html file
+  |  |  |  |-images
+  |  |  |  |  |-demo
+  |  |  |  |-scripts
+  |  |  |  |-styles
+  |  |  |-html                              #HTML files to train it on
+  |  |  |-images                            #Screenshots for training
+  |-readme_images                           #Images for the readme page
+```
