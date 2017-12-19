@@ -19,6 +19,7 @@ floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/s2c_val/1:data 
 pip install keras
 pip install tensorflow
 pip install pillow
+pip install h5py
 ```
 
 ## Folder structure
