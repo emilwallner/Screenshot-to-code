@@ -7,8 +7,8 @@
 
 
 ## HTML
-![HTML](https://i.imgur.com/KnKKHIg.gif "HTML")
+<img src="/local/readme_images/bootstrap.gif?raw=true" width="800px">
 
 
 ## Bootstrap
-![Bootstrap](https://i.imgur.com/L9a8v6U.gif "Bootstrap")
+<img src="/local/readme_images/html.gif?raw=true" width="800px">
