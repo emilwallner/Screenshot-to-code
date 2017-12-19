@@ -19,6 +19,7 @@ floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/s2c_val/1:data 
 pip install keras
 pip install tensorflow
 pip install pillow
+pip install h5py
 ```
 
 ## Folder structure
@@ -49,15 +50,15 @@ pip install pillow
 
 ## Hello World
 ![Hello World](https://i.imgur.com/FVVnDeJ.gif "Hello World")
-<img src="/readme_images/Hello_world_model.png?raw=true" width="400px">
+<img src="/README_images/Hello_world_model.png?raw=true" width="400px">
 
 
 ## HTML
-<img src="/readme_images/html.gif?raw=true" width="800px">
-<img src="/readme_images/HTML_model.png?raw=true" width="400px">
+<img src="/README_images/html.gif?raw=true" width="800px">
+<img src="/README_images/HTML_model.png?raw=true" width="400px">
 
 
 ## Bootstrap
-<img src="/readme_images/bootstrap.gif?raw=true" width="800px">
+<img src="/README_images/bootstrap.gif?raw=true" width="800px">
 
 ## Acknowledgments
