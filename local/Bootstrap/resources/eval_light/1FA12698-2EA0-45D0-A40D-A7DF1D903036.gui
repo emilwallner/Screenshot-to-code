@@ -1,9 +1,12 @@
 header {
-btn-inactive, btn-active, btn-inactive, btn-inactive
+btn-inactive, btn-inactive, btn-inactive, btn-active
 }
 row {
-single {
-small-title, text, btn-red
+double {
+small-title, text, btn-orange
+}
+double {
+small-title, text, btn-orange
 }
 }
 row {
@@ -17,14 +20,6 @@ quadruple {
 small-title, text, btn-green
 }
 quadruple {
-small-title, text, btn-green
-}
-}
-row {
-double {
-small-title, text, btn-green
-}
-double {
 small-title, text, btn-red
 }
 }
