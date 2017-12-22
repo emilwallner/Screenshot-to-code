@@ -1,5 +1,6 @@
 # Turning design mockups into code with deep learning
 
+<img src="/README_images/html.gif?raw=true" width="800px">
 ## Getting started
 
 ## Installation
@@ -49,17 +50,14 @@ pip install h5py
 
 
 ## Hello World
-![Hello World](https://i.imgur.com/FVVnDeJ.gif "Hello World")
-<img src="/README_images/Hello_world_model.png?raw=true" width="400px">
+<p align="center"><img src="/README_images/Hello_world_model.png?raw=true" width="400px"></p>
 
 
 ## HTML
-<img src="/README_images/html.gif?raw=true" width="800px">
-<img src="/README_images/HTML_model.png?raw=true" width="400px">
+<p align="center"><img src="/README_images/HTML_model.png?raw=true" width="400px"></p>
 
 
 ## Bootstrap
-<img src="/README_images/bootstrap.gif?raw=true" width="800px">
-<img src="/README_images/Bootstrap_model.png?raw=true" width="400px">
+<p align="center"><img src="/README_images/Bootstrap_model.png?raw=true" width="400px"></p>
 
 ## Acknowledgments
