@@ -1,7 +1,20 @@
 # Turning design mockups into code with deep learning
 
 <img src="/README_images/html.gif?raw=true" width="800px">
+
 ## Getting started
+
+This is the code for the article 'Turning design mockups into code with deep learning' on FloydHub's blog: https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/
+
+The field took of last year when Tony Beltramelli introduced the pix2code paper and Airbnb launched sketch2code. 
+
+Within three years deep learning will change front-end development. It will increase prototyping speed and lower the barrier for building software.
+
+Currently, the largest barrier to automating front-end development is computing power. However, we can use current deep learning algorithms, along with synthesized training data, to start exploring artificial front-end automation right now.
+
+In the provided models, we’ll teach a neural network how to code a basic a HTML and CSS website based on a picture of a design mockup.
+
+We’ll build the neural network in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
 ## Installation
 
@@ -13,7 +26,7 @@ git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
 cd Screenshot-to-code-in-Keras
 floyd init projectname
 floyd init projectname
-floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/s2c_val/1:data --mode jupyter
+floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/1:data --mode jupyter
 ```
 ### Local
 ``` bash
@@ -21,7 +34,16 @@ pip install keras
 pip install tensorflow
 pip install pillow
 pip install h5py
+pip install jupyter
 ```
+```
+git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
+cd Screenshot-to-code-in-Keras/local
+jupyter notebook
+```
+Go do the desired notebook, files that end with '.ipynb'. To run the model, go to the menu then click on Cell > Run all
+
+The final version, the Bootstrap version, is prepared with a small set to test run the model. If you want to try it with all the data, you need to download the data here: https://www.floydhub.com/emilwallner/datasets/imagetocode, and specify the correct ```dir_name```.
 
 ## Folder structure
 
@@ -61,3 +83,5 @@ pip install h5py
 <p align="center"><img src="/README_images/Bootstrap_model.png?raw=true" width="400px"></p>
 
 ## Acknowledgments
+- The code is largly influenced by Tony Beltramelli's pix2code paper. Code https://github.com/tonybeltramelli/pix2code
+- The structure and some of the functions are from Jason Brownlee's excellent tutorial: https://machinelearningmastery.com/develop-a-caption-generation-model-in-keras/
