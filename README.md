@@ -2,7 +2,7 @@
 
 <img src="/README_images/html.gif?raw=true" width="800px">
 
-## Getting started
+## Introduction
 
 This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
 
