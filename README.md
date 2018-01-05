@@ -25,7 +25,6 @@ floyd login
 git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
 cd Screenshot-to-code-in-Keras
 floyd init projectname
-floyd init projectname
 floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/1:data --mode jupyter
 ```
 ### Local
