@@ -4,9 +4,9 @@
 
 ## Getting started
 
-This is the code for the article 'Turning design mockups into code with deep learning' on FloydHub's blog: https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/
+This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
 
-The field took of last year when Tony Beltramelli introduced the pix2code paper and Airbnb launched sketch2code. 
+The field took of last year when Tony Beltramelli introduced the [pix2code paper](https://arxiv.org/abs/1705.07962) and Airbnb launched [sketching interfaces](https://airbnb.design/sketching-interfaces/). 
 
 Within three years deep learning will change front-end development. It will increase prototyping speed and lower the barrier for building software.
 
@@ -83,5 +83,5 @@ The final version, the Bootstrap version, is prepared with a small set to test r
 <p align="center"><img src="/README_images/Bootstrap_model.png?raw=true" width="400px"></p>
 
 ## Acknowledgments
-- The code is largly influenced by Tony Beltramelli's pix2code paper. Code https://github.com/tonybeltramelli/pix2code
-- The structure and some of the functions are from Jason Brownlee's excellent tutorial: https://machinelearningmastery.com/develop-a-caption-generation-model-in-keras/
+- The code is largly influenced by Tony Beltramelli's pix2code paper. [Code](https://github.com/tonybeltramelli/pix2code) [Paper](https://arxiv.org/abs/1705.07962)
+- The structure and some of the functions are from Jason Brownlee's [excellent tutorial](https://machinelearningmastery.com/develop-a-caption-generation-model-in-keras/)
