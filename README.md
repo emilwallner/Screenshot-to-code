@@ -20,7 +20,7 @@ A quick overview of the process:
 
 ### 2) Give a design image to the trained neural network
 
-<img src="/README_images/html_output.gif?raw=true" width="800px">
+<img src="/README_images/html_display.gif?raw=true" width="800px">
 
 ### 3) Rendered output
 
