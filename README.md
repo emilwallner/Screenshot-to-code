@@ -1,7 +1,5 @@
 # Turning design mockups into code with deep learning
 
-## Introduction
-
 This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
 
 The field took of last year when Tony Beltramelli introduced the [pix2code paper](https://arxiv.org/abs/1705.07962) and Airbnb launched [sketching interfaces](https://airbnb.design/sketching-interfaces/). 
@@ -21,6 +19,9 @@ A quick overview of the process:
 ![Insert image](https://i.imgur.com/LDmoLLV.png)
 
 ### 2) Give a design image to the trained neural network
+
+<img src="/README_images/html_output.gif?raw=true" width="800px">
+
 ### 3) Rendered output
 
 ![Screenshot](https://i.imgur.com/tEAfyZ8.png)
