@@ -18,7 +18,7 @@ A quick overview of the process:
 
 ![Insert image](https://i.imgur.com/LDmoLLV.png)
 
-### 2) Give a design image to the trained neural network
+### 2) The neural network converts the image into HTML markup 
 
 <img src="/README_images/html_display.gif?raw=true" width="800px">
 
