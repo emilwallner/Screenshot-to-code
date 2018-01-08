@@ -1,7 +1,5 @@
 # Turning design mockups into code with deep learning
 
-<img src="/README_images/html.gif?raw=true" width="800px">
-
 ## Introduction
 
 This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
@@ -15,6 +13,18 @@ Currently, the largest barrier to automating front-end development is computing 
 In the provided models, we’ll teach a neural network how to code a basic a HTML and CSS website based on a picture of a design mockup.
 
 We’ll build the neural network in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
+
+A quick overview of the process: 
+
+### 1) Give a design image to the trained neural network
+
+![Insert image](https://i.imgur.com/LDmoLLV.png)
+
+### 2) Give a design image to the trained neural network
+### 3) Rendered output
+
+![Screenshot](https://i.imgur.com/tEAfyZ8.png)
+
 
 ## Installation
 
