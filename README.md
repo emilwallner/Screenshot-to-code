@@ -81,6 +81,10 @@ The final version, the Bootstrap version, is prepared with a small set to test r
 ## Bootstrap
 <p align="center"><img src="/README_images/Bootstrap_model.png?raw=true" width="400px"></p>
 
+## Model weights
+- [Bootstrap](https://www.floydhub.com/emilwallner/datasets/imagetocode)
+- [HTML](https://www.floydhub.com/emilwallner/datasets/html_models)
+
 ## Acknowledgments
 - The code is largly influenced by Tony Beltramelli's pix2code paper. [Code](https://github.com/tonybeltramelli/pix2code) [Paper](https://arxiv.org/abs/1705.07962)
 - The structure and some of the functions are from Jason Brownlee's [excellent tutorial](https://machinelearningmastery.com/develop-a-caption-generation-model-in-keras/)
