@@ -2,9 +2,9 @@
 
 This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
 
-The field took of last year when Tony Beltramelli introduced the [pix2code paper](https://arxiv.org/abs/1705.07962) and Airbnb launched [sketching interfaces](https://airbnb.design/sketching-interfaces/). 
-
 Within three years deep learning will change front-end development. It will increase prototyping speed and lower the barrier for building software.
+
+The field took off last year when Tony Beltramelli introduced the [pix2code paper](https://arxiv.org/abs/1705.07962) and Airbnb launched [sketching interfaces](https://airbnb.design/sketching-interfaces/). 
 
 Currently, the largest barrier to automating front-end development is computing power. However, we can use current deep learning algorithms, along with synthesized training data, to start exploring artificial front-end automation right now.
 
