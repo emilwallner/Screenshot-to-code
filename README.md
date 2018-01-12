@@ -1,4 +1,5 @@
 # Turning design mockups into code with deep learning
+[![Cloud GPU](https://img.shields.io/badge/Run%20experiment%20on-FloydHub-blue.svg)](https://www.floydhub.com/emilwallner/projects/picturetocode)
 
 This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
 
