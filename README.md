@@ -29,7 +29,8 @@ A quick overview of the process:
 
 ## Installation
 
-### Floydhub
+### FloydHub
+FloydHub is hands down the best option to run models on cloud GPUs: [floydhub.com](https://www.floydhub.com/)
 ``` bash
 pip install floyd-cli
 floyd login
