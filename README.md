@@ -10,7 +10,7 @@ The field took off last year when Tony Beltramelli introduced the [pix2code pape
 
 Currently, the largest barrier to automating front-end development is computing power. However, we can use current deep learning algorithms, along with synthesized training data, to start exploring artificial front-end automation right now.
 
-In the provided models, we’ll teach a neural network how to code a basic a HTML and CSS website based on a picture of a design mockup.
+In the provided models, we’ll teach a neural network how to code a basic HTML and CSS website based on a picture of a design mockup.
 
 We’ll build the neural network in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
