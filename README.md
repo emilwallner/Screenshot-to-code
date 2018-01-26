@@ -39,7 +39,7 @@ floyd login
 git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
 cd Screenshot-to-code-in-Keras/floydhub 
 floyd init projectname
-floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/2:data --mode jupyter
+floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/2:data --data emilwallner/datasets/html_models/1:weights --mode jupyter
 ```
 ### Local
 ``` bash
