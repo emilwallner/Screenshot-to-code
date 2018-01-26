@@ -37,9 +37,9 @@ FloydHub is hands down the best option to run models on cloud GPUs: [floydhub.co
 pip install floyd-cli
 floyd login
 git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
-cd Screenshot-to-code-in-Keras
+cd Screenshot-to-code-in-Keras/floydhub 
 floyd init projectname
-floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/1:data --mode jupyter
+floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/2:data --mode jupyter
 ```
 ### Local
 ``` bash
