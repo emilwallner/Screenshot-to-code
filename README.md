@@ -45,11 +45,7 @@ floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/2:d
 ```
 ### Local
 ``` bash
-pip install keras
-pip install tensorflow
-pip install pillow
-pip install h5py
-pip install jupyter
+pip install keras tensorflow pillow h5py jupyter
 ```
 ```
 git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
