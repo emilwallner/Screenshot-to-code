@@ -1,5 +1,7 @@
 # Turning design mockups into code with deep learning
-[![Cloud GPU](https://img.shields.io/badge/Run%20experiment%20on-FloydHub-blue.svg)](https://www.floydhub.com/emilwallner/projects/picturetocode)
+[![Paypal Donation](https://img.shields.io/badge/%E2%98%95%EF%B8%8F%20Flat%20white-Donate%20%245-brightgreen.svg)](https://www.paypal.me/EmilWallner)
+[![Paypal Donation](https://img.shields.io/badge/%F0%9F%8D%BB%20IPA-Donate%20%249-orange.svg)](https://www.paypal.me/EmilWallner)
+[![Cloud GPU](https://img.shields.io/badge/Run%20on-FloydHub-blue.svg)](https://www.floydhub.com/emilwallner/projects/picturetocode)
 [![MIT](https://img.shields.io/cocoapods/l/AFNetworking.svg)](https://github.com/emilwallner/Screenshot-to-code-in-Keras/blob/master/LICENSE)
 
 This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
