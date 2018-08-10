@@ -1,7 +1,7 @@
 # Turning design mockups into code with deep learning
 [![Paypal Donation](https://img.shields.io/badge/%E2%98%95%EF%B8%8F%20Flat%20white-Donate%20%245-brightgreen.svg)](https://www.paypal.me/EmilWallner)
 [![Paypal Donation](https://img.shields.io/badge/%F0%9F%8D%BB%20IPA-Donate%20%249-orange.svg)](https://www.paypal.me/EmilWallner)
-[![Cloud GPU](https://img.shields.io/badge/Run%20on-FloydHub-blue.svg)](https://www.floydhub.com/emilwallner/projects/picturetocode)
+[![Cloud GPU](https://img.shields.io/badge/Run%20on-FloydHub-blue.svg)](https://floydhub.com/run?template=https://github.com/floydhub/pix2code-template)
 [![MIT](https://img.shields.io/cocoapods/l/AFNetworking.svg)](https://github.com/emilwallner/Screenshot-to-code-in-Keras/blob/master/LICENSE)
 
 This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
@@ -34,6 +34,9 @@ A quick overview of the process:
 ## Installation
 
 ### FloydHub
+
+[![Run on FloydHub](https://static.floydhub.com/button/button.svg)](https://floydhub.com/run?template=https://github.com/floydhub/pix2code-template)
+
 FloydHub is hands down the best option to run models on cloud GPUs: [floydhub.com](https://www.floydhub.com/)
 ``` bash
 pip install floyd-cli
