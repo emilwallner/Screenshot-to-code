@@ -35,8 +35,6 @@ A quick overview of the process:
 
 ### FloydHub
 
-FloydHub is hands down the best option to run models on cloud GPUs: [floydhub.com](https://www.floydhub.com/)
-
 [![Run on FloydHub](https://static.floydhub.com/button/button.svg)](https://floydhub.com/run?template=https://github.com/floydhub/pix2code-template)
 
 Click this button to open a [Workspace](https://blog.floydhub.com/workspaces/) on [FloydHub](https://www.floydhub.com/?utm_medium=readme&utm_source=pix2code&utm_campaign=aug_2018) where you will find the same environment and dataset used for the *Bootstrap version*. You can also find the trained models for testing.
