@@ -6,7 +6,9 @@
 
 The neural network is built in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
-This project is influenced by Tony Beltramelli's pix2code ([Code](https://github.com/tonybeltramelli/pix2code) | [Paper](https://arxiv.org/abs/1705.07962)) and Airbnb's [sketching interfaces](https://airbnb.design/sketching-interfaces/). 
+This project is influenced by Tony Beltramelli's [pix2code](https://github.com/tonybeltramelli/pix2code), Airbnb's [sketching interfaces](https://airbnb.design/sketching-interfaces/), and Harvard's [im2markup](https://github.com/harvardnlp/im2markup).
+
+Note: only the Bootstrap version can generalize on new design mock-ups. It uses 16 domain-specific tokens which are translated into HTML/CSS. This version can be trained on a few GPUs. The raw HTML version has potential to generalize, but is still unproven and requires a few hundred GPUs to train. 
 
 A quick overview of the process: 
 
