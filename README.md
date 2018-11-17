@@ -1,18 +1,12 @@
-# Turning design mockups into code with deep learning
-[![Cloud GPU](https://img.shields.io/badge/Run%20on-FloydHub-blue.svg)](https://floydhub.com/run?template=https://github.com/floydhub/pix2code-template)
-[![MIT](https://img.shields.io/cocoapods/l/AFNetworking.svg)](https://github.com/emilwallner/Screenshot-to-code-in-Keras/blob/master/LICENSE)
+<img src="https://emilwallner.github.io/images/s2c.svg">
 
-This is the code for the article ['Turning design mockups into code with deep learning'](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/) on FloydHub's blog. 
+---
 
-Within three years deep learning will change front-end development. It will increase prototyping speed and lower the barrier for building software.
+**A detailed tutorial covering the code in this repository:** [Turning design mockups into code with deep learning](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/).
 
-The field took off last year when Tony Beltramelli introduced the [pix2code paper](https://arxiv.org/abs/1705.07962) and Airbnb launched [sketching interfaces](https://airbnb.design/sketching-interfaces/). 
+The neural network is built in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
-Currently, the largest barrier to automating front-end development is computing power. However, we can use current deep learning algorithms, along with synthesized training data, to start exploring artificial front-end automation right now.
-
-In the provided models, we’ll teach a neural network how to code a basic HTML and CSS website based on a picture of a design mockup.
-
-We’ll build the neural network in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
+This project is influenced by Tony Beltramelli's pix2code ([Code](https://github.com/tonybeltramelli/pix2code) | [Paper](https://arxiv.org/abs/1705.07962)) and Airbnb's [sketching interfaces](https://airbnb.design/sketching-interfaces/). 
 
 A quick overview of the process: 
 
