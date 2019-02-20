@@ -33,21 +33,13 @@ A quick overview of the process:
 
 Click this button to open a [Workspace](https://blog.floydhub.com/workspaces/) on [FloydHub](https://www.floydhub.com/?utm_medium=readme&utm_source=pix2code&utm_campaign=aug_2018) where you will find the same environment and dataset used for the *Bootstrap version*. You can also find the trained models for testing.
 
-``` bash
-pip install floyd-cli
-floyd login
-git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
-cd Screenshot-to-code-in-Keras/floydhub 
-floyd init projectname
-floyd run --gpu --env tensorflow-1.4 --data emilwallner/datasets/imagetocode/2:data --data emilwallner/datasets/html_models/1:weights --mode jupyter
-```
 ### Local
 ``` bash
 pip install keras tensorflow pillow h5py jupyter
 ```
 ```
 git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
-cd Screenshot-to-code-in-Keras/local
+cd Screenshot-to-code-in-Keras/
 jupyter notebook
 ```
 Go do the desired notebook, files that end with '.ipynb'. To run the model, go to the menu then click on Cell > Run all
@@ -57,16 +49,6 @@ The final version, the Bootstrap version, is prepared with a small set to test r
 ## Folder structure
 
 ``` bash
-  |-floydhub                               #Folder to run the project on Floyhub
-  |  |-Bootstrap                           #The Bootstrap version
-  |  |  |-compiler                         #A compiler to turn the tokens to HTML/CSS (by pix2code)
-  |  |-Hello_world                         #The Hello World version
-  |  |-HTML                                #The HTML version
-  |  |  |-resources									
-  |  |  |  |-Resources_for_index_file      #CSS and images to test index.html file
-  |  |  |  |-html                          #HTML files to train it on
-  |  |  |  |-images                        #Screenshots for training
-  |-local                                  #Local setup
   |  |-Bootstrap                           #The Bootstrap version
   |  |  |-compiler                         #A compiler to turn the tokens to HTML/CSS (by pix2code)
   |  |  |-resources											
