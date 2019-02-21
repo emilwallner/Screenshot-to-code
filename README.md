@@ -2,13 +2,13 @@
 
 ---
 
-**A detailed tutorial covering the code in this repository:** [Turning design mockups into code with deep learning](https://blog.floydhub.com/Turning-design-mockups-into-code-with-deep-learning/).
+**A detailed tutorial covering the code in this repository:** [Turning design mockups into code with deep learning](https://medium.freecodecamp.org/how-you-can-train-an-ai-to-convert-your-design-mockups-into-html-and-css-cc7afd82fed4).
 
 The neural network is built in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
 The models are based on Tony Beltramelli's [pix2code](https://github.com/tonybeltramelli/pix2code), and inspired by Airbnb's [sketching interfaces](https://airbnb.design/sketching-interfaces/), and Harvard's [im2markup](https://github.com/harvardnlp/im2markup).
 
-Note: only the Bootstrap version can generalize on new design mock-ups. It uses 16 domain-specific tokens which are translated into HTML/CSS. This version can be trained on a few GPUs. The raw HTML version has potential to generalize, but is still unproven and requires a few hundred GPUs to train. 
+Note: only the Bootstrap version can generalize on new design mock-ups. It uses 16 domain-specific tokens which are translated into HTML/CSS. It has a 97% accuracy (BLEU 4-ngram greedy search). This version can be trained on a few GPUs. The raw HTML version has potential to generalize, but is still unproven and requires a few hundred GPUs to train. 
 
 A quick overview of the process: 
 
