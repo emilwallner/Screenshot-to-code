@@ -74,7 +74,7 @@ The final version, the Bootstrap version, is prepared with a small set to test r
 <p align="center"><img src="/README_images/Bootstrap_model.png?raw=true" width="400px"></p>
 
 ## Model weights
-- [Bootstrap](https://www.floydhub.com/emilwallner/datasets/imagetocode)
+- [Bootstrap](https://www.floydhub.com/emilwallner/datasets/imagetocode) (The pre-trained model uses GRUs instead of LSTMs)
 - [HTML](https://www.floydhub.com/emilwallner/datasets/html_models)
 
 ## Acknowledgments
