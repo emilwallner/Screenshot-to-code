@@ -38,8 +38,8 @@ Click this button to open a [Workspace](https://blog.floydhub.com/workspaces/) o
 pip install keras tensorflow pillow h5py jupyter
 ```
 ```
-git clone https://github.com/emilwallner/Screenshot-to-code-in-Keras
-cd Screenshot-to-code-in-Keras/
+git clone https://github.com/emilwallner/Screenshot-to-code.git
+cd Screenshot-to-code/
 jupyter notebook
 ```
 Go do the desired notebook, files that end with '.ipynb'. To run the model, go to the menu then click on Cell > Run all
