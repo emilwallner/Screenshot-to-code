@@ -2,7 +2,7 @@
 
 ---
 
-**A detailed tutorial covering the code in this repository:** [Turning design mockups into code with deep learning](https://medium.com/@emilwallner/how-you-can-train-an-ai-to-convert-your-design-mockups-into-html-and-css-cc7afd82fed4).
+**A detailed tutorial covering the code in this repository:** [Turning design mockups into code with deep learning](https://blog.floydhub.com/turning-design-mockups-into-code-with-deep-learning/).
 
 The neural network is built in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
