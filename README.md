@@ -1,4 +1,4 @@
-<img src="https://emilwallner.github.io/images/s2c.svg">
+<img src="/README_images/screenshot-to-code.svg?raw=true" width="800px">
 
 ---
 
