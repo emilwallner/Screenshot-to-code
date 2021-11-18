@@ -1,3 +1,5 @@
+add new line
+
 <img src="/README_images/screenshot-to-code.svg?raw=true" width="800px">
 
 ---
@@ -6,13 +8,12 @@
 
 **Plug:** I write about learning Machine learning online and independent research 👉 [Enjoy!](https://www.emilwallner.com/)
 
-The neural network is built in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
 The models are based on Tony Beltramelli's [pix2code](https://github.com/tonybeltramelli/pix2code), and inspired by Airbnb's [sketching interfaces](https://airbnb.design/sketching-interfaces/), and Harvard's [im2markup](https://github.com/harvardnlp/im2markup).
 
 **Note:** only the Bootstrap version can generalize on new design mock-ups. It uses 16 domain-specific tokens which are translated into HTML/CSS. It has a 97% accuracy. The best model uses a GRU instead of an LSTM. This version can be trained on a few GPUs. The raw HTML version has potential to generalize, but is still unproven and requires a significant amount of GPUs to train. The current model is also trained on a homogeneous and small dataset, thus it's hard to tell how well it behaves on more complex layouts.  
 
-A quick overview of the process: 
+An quick overview of the process: 
 
 ### 1) Give a design image to the trained neural network
 
