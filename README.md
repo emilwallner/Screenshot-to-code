@@ -4,7 +4,7 @@
 
 **A detailed tutorial covering the code in this repository:** [Turning design mockups into code with deep learning](https://emilwallner.medium.com/how-you-can-train-an-ai-to-convert-your-design-mockups-into-html-and-css-cc7afd82fed4).
 
-**Plug:** I write about learning Machine learning online and independent research 👉 [Enjoy!](https://www.emilwallner.com/)
+**Plug:** 👉 Check out my 60-page guide, [No ML Degree](https://www.emilwallner.com/), on how to land a machine learning job without a degree.
 
 The neural network is built in three iterations. Starting with a Hello World version, followed by the main neural network layers, and ending by training it to generalize. 
 
